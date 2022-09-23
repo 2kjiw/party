@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'establishRoomNo703OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+body{color: #333; font-size: 13px; line-height: 150%; width: 100%; box-sizing: border-box;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+.container{width: 80%; margin: 0 auto; background: red;}
+
+/* 레이아웃 */
+#header{width: 100%; margin-top: 100px;}
+#section{width: 100%; padding: 50px 0;}
+
+/* 헤더 */
+h1{
+    text-align: center; font-size: 30px; font-family: 'establishRoomNo703OTF';
+    color: dodgerblue;
+}
+nav .nav{
+    display: flex; justify-content: space-evenly;
+    align-items: center; height: 50px;
+}
+nav .nav>li{
+    font-size: 15px; position: relative;
+    width: 8%; text-align: center;
+}
+nav .nav>li>a{
+    font-weight: bold;
+}
+nav .nav>li>ul{
+    width: 100%;
+    position: absolute; top: 20px; left: 0; display: none;
+    background: #fff;
+}
+nav .nav>li>ul>li{
+    padding: 2px 0;
+}
+nav .nav>li>ul>li>a{
+    white-space: nowrap;
+}
+nav .nav>li>ul>li:hover{
+    background: deepskyblue; background: rgba(112, 250, 248, .5);
+}
+nav .nav>li>ul>li:hover>a{
+    color: deepskyblue;
+}
+nav .nav>li:hover{
+    background: deepskyblue;
+}
+nav .nav>li:hover>a{
+    color: #fff;
+}
+
+/* 섹션 */
+h2{
+    font-size: 16px; text-align: center;
+}
+.party{
+    display: flex; justify-content: space-around;}
+
+.party li{}
+.party li a{}
+h3{
+    text-align: center;
+    margin-top: 30px;
+}
+.img{
+    text-align: center;
+}
+.img>img{
+    width: 60%;
+}
