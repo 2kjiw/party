@@ -20,8 +20,9 @@ menu.click(function(){
     menu.removeClass('active');
     tg.addClass('active');
 
-    menulist.css('display','none');
-    menulist.eq(i).css('display','block');
-
+    $('.tab-lists>.active').removeClass('active');
+    menulist.removeClass('active');
+    menulist.eq(i).addClass('active');
+    
     return false
 });

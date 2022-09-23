@@ -9,7 +9,7 @@
 body{color: #333; font-size: 13px; line-height: 150%; width: 100%; box-sizing: border-box;}
 ul{list-style: none;}
 a{text-decoration: none; color: #333;}
-.container{width: 90%; margin: 0 auto; background: red;}
+.container{width: 90%; margin: 0 auto;}
 
 /* 레이아웃 */
 #header{width: 100%; margin-top: 100px;}
@@ -21,40 +21,6 @@ h1{
     text-align: center; font-size: 30px; font-family: 'establishRoomNo703OTF';
     color: dodgerblue;
 }
-nav .nav{
-    display: flex; justify-content: space-evenly;
-    align-items: center; height: 50px;
-}
-nav .nav>li{
-    font-size: 15px; position: relative;
-    width: 8%; text-align: center;
-}
-nav .nav>li>a{
-    font-weight: bold;
-}
-nav .nav>li>ul{
-    width: 100%;
-    position: absolute; top: 20px; left: 0; display: none;
-    background: #fff;
-}
-nav .nav>li>ul>li{
-    padding: 2px 0;
-}
-nav .nav>li>ul>li>a{
-    white-space: nowrap;
-}
-nav .nav>li>ul>li:hover{
-    background: deepskyblue; background: rgba(112, 250, 248, .5);
-}
-nav .nav>li>ul>li:hover>a{
-    color: deepskyblue;
-}
-nav .nav>li:hover{
-    background: deepskyblue;
-}
-nav .nav>li:hover>a{
-    color: #fff;
-}
 
 
 /* 섹션1 */
@@ -62,34 +28,93 @@ nav .nav>li:hover>a{
     display: flex; justify-content: space-evenly;
     margin-bottom: 20px;
 }
+.tab>li{
+    position: relative;
+    transition: .3s;
+}
 .tab>li.active:before{
     content: "";
     display: block;
     position: absolute;
-    top: 2px; left: 50%;
+    top: -5px; left: 50%;
     width: 3px; height: 3px;
     border-radius: 50%;
     background-color: deepskyblue;
 }
-.tab-list{
-    display: flex; justify-content: space-evenly;
+.tab>li.active:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 100%; height: 2px;
+    background: deepskyblue;
+    animation: ani .3s ease-in-out;
 }
-.tab-list>li{
+.tab>li:hover:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px; left: 50%;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+}
+.tab>li:hover:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 100%; height: 2px;
+    background: deepskyblue;
+    transition: ani .3s ease-in-out;
+}
+.tab>li:hover>a{
+    color: deepskyblue;
+}
+.tab>li.active>a{
+    color: deepskyblue;
+}
+.tab-li{
+    display: none;
+}
+.tab-li .tab-list{
+    display: flex; justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.tab-li .tab-list>li{
     width: 100%; text-align: center;
     position: relative;
 }
 .tab-lists{}
-.tab-lists div{display: none;}
+.tab-lists div{
+    display: none;
+}
+.tab-lists div.active{
+    display: block;
+}
 .tab-lists div ul{
     display: flex;
     justify-content: space-between;
 }
+.tab-lists div .star{
+    background: yellow;
+}
+.tab-lists div .grey{
+    background: #eee;
+}
 .tab-lists div ul li{
     width: 100%;
-    text-align: center;
+    text-align: left;
     border: 1px solid #ccc;
     padding: 5px 0;
     align-items: inherit;
+    padding: 5px;
+}
+.tab-lists div ul li:first-child{
+    text-align: center;
+}
+.tab-lists div ul li:nth-child(5){
+    text-align: center;
 }
 .tab-lists div ul li a{}
 
@@ -110,5 +135,10 @@ h3{
     text-align: center;
 }
 .img>img{
-    width: 60%;
+    width: 75%;
+}
+
+@keyframes ani {
+    0%{width: 0%;}
+    100%{width: 100%;}
 }
