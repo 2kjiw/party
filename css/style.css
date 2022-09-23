@@ -9,11 +9,12 @@
 body{color: #333; font-size: 13px; line-height: 150%; width: 100%; box-sizing: border-box;}
 ul{list-style: none;}
 a{text-decoration: none; color: #333;}
-.container{width: 80%; margin: 0 auto; background: red;}
+.container{width: 90%; margin: 0 auto; background: red;}
 
 /* 레이아웃 */
 #header{width: 100%; margin-top: 100px;}
-#section{width: 100%; padding: 50px 0;}
+#section1{width: 100%; padding: 50px 0;}
+#section2{width: 100%; padding: 50px 0;}
 
 /* 헤더 */
 h1{
@@ -55,15 +56,52 @@ nav .nav>li:hover>a{
     color: #fff;
 }
 
-/* 섹션 */
+
+/* 섹션1 */
+.tab{
+    display: flex; justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.tab>li.active:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px; left: 50%;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+}
+.tab-list{
+    display: flex; justify-content: space-evenly;
+}
+.tab-list>li{
+    width: 100%; text-align: center;
+    position: relative;
+}
+.tab-lists{}
+.tab-lists div{display: none;}
+.tab-lists div ul{
+    display: flex;
+    justify-content: space-between;
+}
+.tab-lists div ul li{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    align-items: inherit;
+}
+.tab-lists div ul li a{}
+
+/* 섹션2 */
 h2{
     font-size: 16px; text-align: center;
 }
 .party{
-    display: flex; justify-content: space-around;}
-
-.party li{}
-.party li a{}
+    display: flex; justify-content: space-around;
+}
+.party>li{}
+.party>li a{}
 h3{
     text-align: center;
     margin-top: 30px;
