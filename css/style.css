@@ -75,7 +75,6 @@ h1{
     color: deepskyblue;
 }
 .tab-li{
-    display: none;
 }
 .tab-li .tab-list{
     display: flex; justify-content: space-evenly;
